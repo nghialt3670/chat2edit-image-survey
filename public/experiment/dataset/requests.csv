@@ -1,0 +1,101 @@
+,text,images,category,language
+0,"Add the text ""These are chairs"" to the image.",pic01.jpg,5,en
+1,Replace the elephant with a deer.,pic07.jpg,5,en
+2,Replace the lotus with a rose.,pic02.jpg,5,en
+3,Move the lotus 50px to the right.,pic02.jpg,5,en
+4,Change the color of the lotus flower to red.,pic02.jpg,5,en
+5,Replace the lotus flower with a white chrysanthemum.,pic02.jpg,5,en
+6,Replace the lotus in the first image with the lotus from the second image.,pic02.jpg;pic06.jpg,5,en
+7,Give me the lotus flower in the photo.,pic02.jpg,5,en
+8,Rotate the elephant 90 degrees to the right.,pic07.jpg,5,en
+9,Reduce the size of the elephant by 20%.,pic07.jpg,5,en
+10,Remove all carrots from the image.,pic04.jpg,5,en
+11,Remove the airplane from the image.,pic19.jpg,5,en
+12,Give me the elephant in the image,pic07.jpg,5,en
+13,Shrink the object in the image by 30%.,pic17.jpg,5,en
+14,Convert the image to grayscale.,pic30.jpg,5,en
+15,Remove the white dog from the image.,pic34.jpg,5,en
+16,Increase the saturation of the image by 20%.,pic33.jpg,5,en
+17,Remove the airplane's shadow on the surface of the sea.,pic19.jpg,5,en
+18,Give me the red bag on the shelf near the store for me.,pic18.jpg,5,en
+19,Remove the cat from the image.,pic05.jpg,2,en
+20,Replace the dog in the image with any horse.,pic05.jpg,2,en
+21,Replace the cat in the image with a cute puppy.,pic10.jpg,2,en
+22,Replace the TV with an artistic oil painting.,pic10.jpg,2,en
+23,Increase the brightness of the tiger in the image by 30%.,pic09.jpg,2,en
+24,Remove the deer from the image.,pic09.jpg,2,en
+25,Replace the lotus in the first image with a rose from the second image.,pic02.jpg;pic09.jpg,2,en
+26,Add the cat from the second image to the right of the first image.,pic02.jpg;pic09.jpg,2,en
+27,Remove the plate of spaghetti and coffee cup from the table.,pic08.jpg,2,en
+28,Add a water glass similar to the one in the image in the center of the image.,pic08.jpg,2,en
+29,Remove the big tree from the image.,pic03.jpg,2,en
+30,Remove the cat from the image.,pic32.jpg,2,en
+31,Shrink the elephant by 20%.,pic34.jpg,2,en
+32,Add a few water droplets to the large leaf in the image.,pic26.jpg,2,en
+33,Separate the large boat in the image.,pic05.jpg,2,en
+34,Move the cat in the image 80px to the left.,pic15.jpg,2,en
+35,Remove the carrot from the image.,pic04.jpg,0,en
+36,Replace the lemon with an orange.,pic04.jpg,0,en
+37,Move the red chair 20px to the left.,pic01.jpg,0,en
+38,Enlarge the wooden chair in the image by 20%.,pic01.jpg,0,en
+39,Reduce the brightness of the dog in the image.,pic11.jpg,0,en
+40,Rotate the dog in the image 90 degrees to the left.,pic11.jpg,0,en
+41,Remove the brown bag from the image.,pic12.jpg,0,en
+42,Replace the glasses with a fashionable handbag.,pic12.jpg,0,en
+43,Move the player on the field 30px to the right.,pic03.jpg,0,en
+44,Remove the coat from the image.,pic13.jpg,0,en
+45,Increase the brightness of the coat in the image by 80%.,pic13.jpg,0,en
+46,Remove the white flower from the image.,pic26.jpg,0,en
+47,Replace the dog in the image with a cat.,pic33.jpg,0,en
+48,Shrink the dog by 35%.,pic32.jpg,0,en
+49,Remove the fish from the image.,pic20.jpg,0,en
+50,Separate the fish in the image.,pic20.jpg,0,en
+51,Enlarge the hand in the image by 20%.,pic22.jpg,0,en
+52,Extend the legs of the two figures.,pic12.jpg,3,en
+53,Convert the image to an oil painting style.,pic02.jpg,3,en
+54,Create a video from the image above.,pic02.jpg,3,en
+55,Add speech bubbles for each character directly into the image above.,pic03.jpg,3,en
+56,Add people to the empty chairs to make the restaurant crowded.,pic08.jpg,3,en
+57,Add makeup to the face.,pic14.jpg,3,en
+58,Create a park background for the girl in the image.,pic14.jpg,3,en
+59,Edit the woman's figure to make her slimmer.,pic35.jpg,3,en
+60,Change the background to a flower garden for the two people in the image.,pic15.jpg,3,en
+61,Convert the image to an artistic anime style.,pic09.jpg,3,en
+62,Create an image of a forest with many wild animals.,pic09.jpg,3,en
+63,Convert the image to an oil painting style.,pic25.jpg,3,en
+64,Create a video from the image above.,pic20.jpg,3,en
+65,Create an image of a fruit garden from the image.,pic30.jpg,3,en
+66,Create an image of a party with the two dogs in the image.,pic34.jpg,3,en
+67,Convert this image into a PowerPoint file.,pic16.jpg,3,en
+68,Increase the brightness of the image.,pic01.jpg,1,en
+69,Reduce the saturation of all red chairs.,pic01.jpg,1,en
+70,Rotate the lotus flower in the image.,pic02.jpg,1,en
+71,Increase the brightness of the lotus flower in the image.,pic02.jpg,1,en
+72,Move the lotus flower to the right.,pic02.jpg,1,en
+73,Rotate the dog in the image to the left.,pic16.jpg,1,en
+74,Move the dog downwards.,pic16.jpg,1,en
+75,Decrease the brightness of the dog in the image.,pic16.jpg,1,en
+76,Increase the saturation of the image.,pic09.jpg,1,en
+77,Decrease the brightness of the image.,pic09.jpg,1,en
+78,Shrink the elephant in the image.,pic07.jpg,1,en
+79,Move the rabbit slightly to the left.,pic17.jpg,1,en
+80,Shrink the motorcycle in the image.,pic24.jpg,1,en
+81,Enlarge the green plant on the hand.,pic22.jpg,1,en
+82,Add a large cloud.,pic05.jpg,1,en
+83,Balance the brightness of the image.,pic18.jpg,1,en
+84,Increase the saturation of the image.,pic29.jpg,1,en
+85,Increase the brightness of the image.,pic23.jpg,4,en
+86,Increase the contrast of the image by 30%.,pic28.jpg,4,en
+87,Decrease the brightness by 20%.,pic27.jpg,4,en
+88,Increase the contrast by 70%.,pic30.jpg,4,en
+89,Make the image 60% darker.,pic29.jpg,4,en
+90,Reduce the saturation of the image by 80%.,pic02.jpg,4,en
+91,Increase the brightness balance of the image by 50%.,pic28.jpg,4,en
+92,Decrease the saturation by 40%.,pic22.jpg,4,en
+93,Increase the brightness balance of the image.,pic31.jpg,4,en
+94,Reduce the saturation of the image by 50%.,pic15.jpg,4,en
+95,Increase the contrast by 78%.,pic20.jpg,4,en
+96,Decrease the brightness balance of the image by 65%.,pic13.jpg,4,en
+97,Increase the saturation of the image by 60%.,pic17.jpg,4,en
+98,Decrease the contrast by 75%.,pic05.jpg,4,en
+99,Increase the brightness balance by 90%.,pic21.jpg,4,en
