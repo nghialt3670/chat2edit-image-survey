@@ -14,7 +14,7 @@ import { Button } from "@/components/ui/button";
 import { useSurveyResult } from "@/hooks/use-survey-result";
 
 const SOURCES = ["chat2edit", "gemini", "chatgpt"];
-const N = 2
+const N = 100
 
 export default function FormsPage() {
   const [isFetching, setIsFetching] = useState<boolean>(true);
