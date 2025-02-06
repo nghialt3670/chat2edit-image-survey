@@ -67,7 +67,7 @@ export function SurveyForm({ index, request, srcToResponse }: SurveyFormProps) {
       {/* Main Card */}
       <Card className="h-[calc(100vh-100px)] flex flex-col m-6">
         <CardContent className="h-full flex flex-col space-y-4 p-4 overflow-y-scroll">
-          <div className="w-1/3 h-fit ml-auto border-none p-4">
+          <div className="w-full md:w-1/3 h-fit ml-auto border-none p-4">
             <div className="flex flex-col space-y-2 ml-auto w-fit">
               {/* Request Images (Keep Original Sizing) */}
               <div className="flex flex-col space-y-2 ml-auto">
@@ -107,13 +107,13 @@ export function SurveyForm({ index, request, srcToResponse }: SurveyFormProps) {
           <Separator className="h-0.5" />
 
           {/* Response Cards */}
-          <div className="flex flex-row w-full space-x-4 justify-evenly">
+          <div className="flex flex-col md:flex-row w-full gap-4 justify-evenly">
             {Object.entries(suffledSrcToResponse)
               .filter(([_, response]) => response?.text)
               .map(([src, response], idx) => (
                 <Card
                   key={`${response.text}_${response.images.join(";")}_${idx}`}
-                  className="w-1/3 h-fit bg-muted relative"
+                  className="w-full md:w-1/3 h-fit bg-muted relative"
                 >
                   <CardContent className="p-4">
                     <div className="flex flex-col space-y-2">
