@@ -17,17 +17,19 @@ export default function HomePage() {
       </CardHeader>
       <CardContent className="h-full flex flex-col space-y-4 p-4 overflow-y-scroll">
         <p>
-          This study consists of <strong>100 slides</strong>. Each slide
-          presents a message to a chatbot that performs image editing. The
-          message includes text and one or more images. Below each message, you
-          will see different responses containing both text and images.
+          This study consists of <strong>100 slides</strong>. Each slide presents a message to a chatbot that performs image editing. The message includes text and one or more images. Below each message, you will see different responses containing both text and images.
         </p>
         <p>
-          Your task is to evaluate each response and mark it as{" "}
-          <strong>relevant</strong>
-          or <strong>irrelevant</strong> based on the needs of the request
-          message.
+          Your task is to evaluate each response based on two criteria:
         </p>
+        <ul className="list-disc pl-5">
+          <li>
+            <strong>Understanding the user's intent:</strong> Determine whether the chatbot correctly understands what the user is asking. If the response aligns with the intended request, mark it as <strong>Understood</strong>. Otherwise, mark it as <strong>Not Understood</strong>.
+          </li>
+          <li className="mt-2">
+            <strong>Relevance of the response:</strong> Assess whether the chatbot's response meets the user's request. If the response is useful and directly addresses the request, mark it as <strong>Relevant</strong>. Otherwise, mark it as <strong>Not Relevant</strong>.
+          </li>
+        </ul>
         <p>Please enter your details to begin:</p>
         <Input
           type="text"
@@ -41,10 +43,7 @@ export default function HomePage() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
-        <Button
-          disabled={!fullName || !email}
-          onClick={() => router.push("/forms")}
-        >
+        <Button disabled={!fullName || !email} onClick={() => router.push("/forms")}>
           Start
         </Button>
       </CardContent>
