@@ -11,6 +11,7 @@ import { useCarousel } from "./ui/carousel";
 import { Separator } from "./ui/separator";
 import { Button } from "./ui/button";
 import { Label } from "./ui/label";
+import { map } from 'lodash';
 
 interface SurveyFormProps {
   index: number;
@@ -29,7 +30,7 @@ export function SurveyForm({ index, request, srcToResponse }: SurveyFormProps) {
   const { setResults } = useSurveyResult();
 
   useEffect(() => {
-    if (Object.keys(srcToResponse).every((src) => src in srcToJudgement)) {
+    if (Object.keys(srcToResponse).length * 2 === Object.keys(srcToJudgement).length) {
       setResults(index, srcToJudgement);
     }
   }, [srcToJudgement, index]);
@@ -175,8 +176,10 @@ export function SurveyForm({ index, request, srcToResponse }: SurveyFormProps) {
                         <Label
                           htmlFor="r1"
                           className={
-                            srcToJudgement[src] === "understood"
-                              ? "text-green-600"
+                            srcToJudgement[`${src}-understanding`]
+                              ? srcToJudgement[`${src}-understanding`] == "understood"
+                                ? "text-green-600"
+                                : "text-green-200"
                               : "text-green-400"
                           }
                         >
@@ -188,8 +191,10 @@ export function SurveyForm({ index, request, srcToResponse }: SurveyFormProps) {
                         <Label
                           htmlFor="r2"
                           className={
-                            srcToJudgement[src] === "not-understood"
-                              ? "text-red-600"
+                            srcToJudgement[`${src}-understanding`]
+                              ? srcToJudgement[`${src}-understanding`] == "not-understood"
+                                ? "text-red-600"
+                                : "text-red-200"
                               : "text-red-400"
                           }
                         >
@@ -210,8 +215,8 @@ export function SurveyForm({ index, request, srcToResponse }: SurveyFormProps) {
                         <Label
                           htmlFor="r1"
                           className={
-                            srcToJudgement[src]
-                              ? srcToJudgement[src] == "relevant"
+                            srcToJudgement[`${src}-relevance`]
+                              ? srcToJudgement[`${src}-relevance`] == "relevant"
                                 ? "text-green-600"
                                 : "text-green-200"
                               : "text-green-400"
@@ -225,8 +230,8 @@ export function SurveyForm({ index, request, srcToResponse }: SurveyFormProps) {
                         <Label
                           htmlFor="r2"
                           className={
-                            srcToJudgement[src]
-                              ? srcToJudgement[src] == "irrelevant"
+                            srcToJudgement[`${src}-relevance`]
+                              ? srcToJudgement[`${src}-relevance`] == "irrelevant"
                                 ? "text-red-600"
                                 : "text-red-200"
                               : "text-red-400"
