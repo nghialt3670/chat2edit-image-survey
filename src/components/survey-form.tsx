@@ -197,6 +197,45 @@ export function SurveyForm({ index, request, srcToResponse }: SurveyFormProps) {
                         </Label>
                       </div>
                     </RadioGroup>
+                    <RadioGroup
+                      onValueChange={(value) =>
+                        setSrcToJudgement((prev) => ({
+                          ...prev,
+                          [`${src}-relevance`]: value,
+                        }))
+                      }
+                    >
+                      <div className="flex items-center space-x-2">
+                        <RadioGroupItem value="relevant" id="r1" />
+                        <Label
+                          htmlFor="r1"
+                          className={
+                            srcToJudgement[src]
+                              ? srcToJudgement[src] == "relevant"
+                                ? "text-green-600"
+                                : "text-green-200"
+                              : "text-green-400"
+                          }
+                        >
+                          Relevant result
+                        </Label>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <RadioGroupItem value="irrelevant" id="r2" />
+                        <Label
+                          htmlFor="r2"
+                          className={
+                            srcToJudgement[src]
+                              ? srcToJudgement[src] == "irrelevant"
+                                ? "text-red-600"
+                                : "text-red-200"
+                              : "text-red-400"
+                          }
+                        >
+                          Irrelevant result
+                        </Label>
+                      </div>
+                    </RadioGroup>
                   </CardFooter>
                 </Card>
               ))}
