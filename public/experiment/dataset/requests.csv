@@ -67,35 +67,35 @@
 65,Create an image of a fruit garden from the image.,pic30.jpg,3,en
 66,Create an image of a party with the two dogs in the image.,pic34.jpg,3,en
 67,Convert this image into a PowerPoint file.,pic16.jpg,3,en
-68,Increase the brightness of the image.,pic01.jpg,1,en
-69,Reduce the saturation of all red chairs.,pic01.jpg,1,en
+68,Increase the brightness of the image with the suitable parameters.,pic01.jpg,1,en
+69,Reduce the saturation of all red chairs with the suitable parameters.,pic01.jpg,1,en
 70,Rotate the lotus flower in the image.,pic02.jpg,1,en
-71,Increase the brightness of the lotus flower in the image.,pic02.jpg,1,en
+71,Increase the brightness of the lotus flower in the image with the suitable parameters.,pic02.jpg,1,en
 72,Move the lotus flower to the right.,pic02.jpg,1,en
 73,Rotate the dog in the image to the left.,pic16.jpg,1,en
 74,Move the dog downwards.,pic16.jpg,1,en
-75,Decrease the brightness of the dog in the image.,pic16.jpg,1,en
-76,Increase the saturation of the image.,pic09.jpg,1,en
-77,Decrease the brightness of the image.,pic09.jpg,1,en
+75,Decrease the brightness of the dog in the image with the suitable parameters.,pic16.jpg,1,en
+76,Increase the saturation of the image with the suitable parameters.,pic09.jpg,1,en
+77,Decrease the brightness of the image with the suitable parameters.,pic09.jpg,1,en
 78,Shrink the elephant in the image.,pic07.jpg,1,en
 79,Move the rabbit slightly to the left.,pic17.jpg,1,en
 80,Shrink the motorcycle in the image.,pic24.jpg,1,en
 81,Enlarge the green plant on the hand.,pic22.jpg,1,en
 82,Add a large cloud.,pic05.jpg,1,en
-83,Balance the brightness of the image.,pic18.jpg,1,en
-84,Increase the saturation of the image.,pic29.jpg,1,en
-85,Increase the brightness of the image.,pic23.jpg,4,en
-86,Increase the contrast of the image by 30%.,pic28.jpg,4,en
-87,Decrease the brightness by 20%.,pic27.jpg,4,en
-88,Increase the contrast by 70%.,pic30.jpg,4,en
-89,Make the image 60% darker.,pic29.jpg,4,en
-90,Reduce the saturation of the image by 80%.,pic02.jpg,4,en
-91,Increase the brightness balance of the image by 50%.,pic28.jpg,4,en
-92,Decrease the saturation by 40%.,pic22.jpg,4,en
-93,Increase the brightness balance of the image.,pic31.jpg,4,en
-94,Reduce the saturation of the image by 50%.,pic15.jpg,4,en
-95,Increase the contrast by 78%.,pic20.jpg,4,en
-96,Decrease the brightness balance of the image by 65%.,pic13.jpg,4,en
-97,Increase the saturation of the image by 60%.,pic17.jpg,4,en
-98,Decrease the contrast by 75%.,pic05.jpg,4,en
-99,Increase the brightness balance by 90%.,pic21.jpg,4,en
+83,Balance the brightness of the image with the suitable parameters.,pic18.jpg,1,en
+84,Increase the saturation of the image with the suitable parameters.,pic29.jpg,1,en
+85,Increase the brightness of the image with the suitable parameters.,pic23.jpg,4,en
+86,"Increase the contrast of the image by 30%. If the image is not good, please suggest more suitable parameters.",pic28.jpg,4,en
+87,"Decrease the brightness by 20%. If the image is not good, please suggest more suitable parameters.",pic27.jpg,4,en
+88,"Increase the contrast by 70%. If the image is not good, please suggest more suitable parameters.",pic30.jpg,4,en
+89,"Make the image 60% darker. If the image is not good, please suggest more suitable parameters.",pic29.jpg,4,en
+90,"Reduce the saturation of the image by 80%. If the image is not good, please suggest more suitable parameters.",pic02.jpg,4,en
+91,"Increase the brightness balance of the image by 50%. If the image is not good, please suggest more suitable parameters.",pic28.jpg,4,en
+92,"Decrease the saturation by 40%. If the image is not good, please suggest more suitable parameters.",pic22.jpg,4,en
+93,Increase the brightness balance of the image with the suitable parameters.,pic31.jpg,4,en
+94,"Reduce the saturation of the image by 50%. If the image is not good, please suggest more suitable parameters.",pic15.jpg,4,en
+95,"Increase the contrast by 78%. If the image is not good, please suggest more suitable parameters.",pic20.jpg,4,en
+96,"Decrease the brightness balance of the image by 65%. If the image is not good, please suggest more suitable parameters.",pic13.jpg,4,en
+97,"Increase the saturation of the image by 60%. If the image is not good, please suggest more suitable parameters.",pic17.jpg,4,en
+98,"Decrease the contrast by 75%. If the image is not good, please suggest more suitable parameters.",pic05.jpg,4,en
+99,"Increase the brightness balance by 90%. If the image is not good, please suggest more suitable parameters.",pic21.jpg,4,en
