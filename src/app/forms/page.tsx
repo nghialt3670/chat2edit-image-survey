@@ -14,7 +14,7 @@ import { Button } from "@/components/ui/button";
 import { Message } from "@/interfaces/message";
 
 const SOURCES = ["chat2edit", "gemini", "chatgpt"];
-const N = 10;
+const N = 100;
 
 export default function FormsPage() {
   const [isFetching, setIsFetching] = useState<boolean>(true);
