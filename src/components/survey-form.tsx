@@ -2,6 +2,7 @@ import { ArrowLeft, ArrowRight, Expand, X } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import _ from "lodash";
+import Image from "next/image";
 import { Card, CardContent, CardFooter, CardHeader } from "./ui/card";
 import { RadioGroup, RadioGroupItem } from "./ui/radio-group";
 import { useSurveyResult } from "@/hooks/use-survey-result";
@@ -28,29 +29,35 @@ export function SurveyForm({ index, request, srcToResponse }: SurveyFormProps) {
   const { setResults } = useSurveyResult();
 
   useEffect(() => {
-    if (Object.keys(srcToResponse).every(src => src in srcToJudgement)) {
+    if (Object.keys(srcToResponse).every((src) => src in srcToJudgement)) {
       setResults(index, srcToJudgement);
     }
   }, [srcToJudgement, index]);
 
   const suffledSrcToResponse = useMemo(() => {
-    return Object.fromEntries(_.shuffle(Object.entries(srcToResponse)))
-  }, [])
+    return Object.fromEntries(_.shuffle(Object.entries(srcToResponse)));
+  }, []);
 
-  const keys1 = Object.keys(Object.fromEntries(Object.entries(srcToResponse).filter(([_, response]) => response.text)));
+  const keys1 = Object.keys(
+    Object.fromEntries(
+      Object.entries(srcToResponse).filter(([_, response]) => response.text),
+    ),
+  );
   const keys2 = Object.keys(srcToJudgement);
-  const isAllJudged =
-    keys1.length * 2 === keys2.length;
+  const isAllJudged = keys1.length * 2 === keys2.length;
 
   return (
     <>
-      {/* Zoom Modal inside Card Content, no fixed positioning */}
+      {/* Zoom Modal */}
       {fullScreenImage && (
         <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-80 flex items-center justify-center z-50">
           <div className="relative max-w-4xl w-full">
-            <img
+            <Image
               src={fullScreenImage}
+              alt="Full-screen view"
               className="w-full h-auto max-h-[90vh] object-contain rounded-lg"
+              width={800}
+              height={600}
               onClick={(e) => e.stopPropagation()} // Prevent modal close when clicking the image
             />
             <Button
@@ -69,13 +76,16 @@ export function SurveyForm({ index, request, srcToResponse }: SurveyFormProps) {
         <CardContent className="h-full flex flex-col space-y-4 p-4 overflow-y-scroll">
           <div className="w-full md:w-1/3 h-fit ml-auto border-none p-4">
             <div className="flex flex-col space-y-2 ml-auto w-fit">
-              {/* Request Images (Keep Original Sizing) */}
+              {/* Request Images */}
               <div className="flex flex-col space-y-2 ml-auto">
                 {request.images.map((image) => (
                   <div key={image} className="relative">
-                    <img
+                    <Image
                       className="rounded-lg cursor-pointer ml-auto w-full"
                       src={`/experiment/dataset/images/${image}`}
+                      alt="Request image"
+                      width={400}
+                      height={300}
                       onClick={() =>
                         setFullScreenImage(
                           `/experiment/dataset/images/${image}`,
@@ -99,7 +109,7 @@ export function SurveyForm({ index, request, srcToResponse }: SurveyFormProps) {
 
               {/* Request Text */}
               <ReactMarkdown className="w-fit rounded-lg px-3 py-2 bg-muted ml-auto">
-                {request.text}
+                {request.text.replace(/'/g, "&rsquo;")}
               </ReactMarkdown>
             </div>
           </div>
@@ -120,9 +130,12 @@ export function SurveyForm({ index, request, srcToResponse }: SurveyFormProps) {
                       <div>
                         {response.images.map((image) => (
                           <div key={image} className="relative">
-                            <img
+                            <Image
                               className="w-full h-auto rounded-lg cursor-pointer"
                               src={`/experiment/results/${src}/images/${image}`}
+                              alt="Response image"
+                              width={400}
+                              height={300}
                               onClick={() =>
                                 setFullScreenImage(
                                   `/experiment/results/${src}/images/${image}`,
@@ -144,80 +157,43 @@ export function SurveyForm({ index, request, srcToResponse }: SurveyFormProps) {
                         ))}
                       </div>
                       <ReactMarkdown className="w-full font-semibold">
-                        {response.text}
+                        {response.text.replace(/'/g, "&rsquo;")}
                       </ReactMarkdown>
                     </div>
                   </CardContent>
                   <CardFooter className="justify-between">
                     <RadioGroup
                       onValueChange={(value) =>
-                        setSrcToJudgement((prev) => ({ ...prev, [`${src}-understanding`]: value }))
+                        setSrcToJudgement((prev) => ({
+                          ...prev,
+                          [`${src}-understanding`]: value,
+                        }))
                       }
                     >
                       <div className="flex items-center space-x-2">
-                        <RadioGroupItem value="relevant" id="r1" />
+                        <RadioGroupItem value="understood" id="r1" />
                         <Label
                           htmlFor="r1"
                           className={
-                            srcToJudgement[src]
-                              ? srcToJudgement[src] == "understood"
-                                ? "text-green-600"
-                                : "text-green-200"
+                            srcToJudgement[src] === "understood"
+                              ? "text-green-600"
                               : "text-green-400"
                           }
                         >
-                          Understood user's intent
+                          Understood user&rsquo;s intent
                         </Label>
                       </div>
                       <div className="flex items-center space-x-2">
-                        <RadioGroupItem value="irrelevant" id="r2" />
+                        <RadioGroupItem value="not-understood" id="r2" />
                         <Label
                           htmlFor="r2"
                           className={
-                            srcToJudgement[src]
-                              ? srcToJudgement[src] == "not-understood"
-                                ? "text-red-600"
-                                : "text-red-200"
+                            srcToJudgement[src] === "not-understood"
+                              ? "text-red-600"
                               : "text-red-400"
                           }
                         >
-                          Not understood user's intent
-                        </Label>
-                      </div>
-                    </RadioGroup>
-                    <RadioGroup
-                      onValueChange={(value) =>
-                        setSrcToJudgement((prev) => ({ ...prev, [`${src}-relevance`]: value }))
-                      }
-                    >
-                      <div className="flex items-center space-x-2">
-                        <RadioGroupItem value="relevant" id="r1" />
-                        <Label
-                          htmlFor="r1"
-                          className={
-                            srcToJudgement[src]
-                              ? srcToJudgement[src] == "relevant"
-                                ? "text-green-600"
-                                : "text-green-200"
-                              : "text-green-400"
-                          }
-                        >
-                          Relevant result
-                        </Label>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <RadioGroupItem value="irrelevant" id="r2" />
-                        <Label
-                          htmlFor="r2"
-                          className={
-                            srcToJudgement[src]
-                              ? srcToJudgement[src] == "irrelevant"
-                                ? "text-red-600"
-                                : "text-red-200"
-                              : "text-red-400"
-                          }
-                        >
-                          Irrelevant result
+                          Not understood user&rsquo;s intent
                         </Label>
                       </div>
                     </RadioGroup>
@@ -236,7 +212,7 @@ export function SurveyForm({ index, request, srcToResponse }: SurveyFormProps) {
             <Button
               disabled={!canScrollNext || !isAllJudged}
               onClick={scrollNext}
-              >
+            >
               Next
               <ArrowRight />
             </Button>
