@@ -37,10 +37,10 @@ export function SurveyForm({ index, request, srcToResponse }: SurveyFormProps) {
     return Object.fromEntries(_.shuffle(Object.entries(srcToResponse)))
   }, [])
 
-  const keys1 = Object.keys(srcToResponse);
+  const keys1 = Object.keys(Object.fromEntries(Object.entries(srcToResponse).filter(([_, response]) => response.text)));
   const keys2 = Object.keys(srcToJudgement);
   const isAllJudged =
-    keys1.length === keys2.length && keys1.every((key) => keys2.includes(key));
+    keys1.length * 2 === keys2.length;
 
   return (
     <>
@@ -148,10 +148,46 @@ export function SurveyForm({ index, request, srcToResponse }: SurveyFormProps) {
                       </ReactMarkdown>
                     </div>
                   </CardContent>
-                  <CardFooter>
+                  <CardFooter className="justify-between">
                     <RadioGroup
                       onValueChange={(value) =>
-                        setSrcToJudgement((prev) => ({ ...prev, [src]: value }))
+                        setSrcToJudgement((prev) => ({ ...prev, [`${src}-understanding`]: value }))
+                      }
+                    >
+                      <div className="flex items-center space-x-2">
+                        <RadioGroupItem value="relevant" id="r1" />
+                        <Label
+                          htmlFor="r1"
+                          className={
+                            srcToJudgement[src]
+                              ? srcToJudgement[src] == "understood"
+                                ? "text-green-600"
+                                : "text-green-200"
+                              : "text-green-400"
+                          }
+                        >
+                          Understood user's intent
+                        </Label>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <RadioGroupItem value="irrelevant" id="r2" />
+                        <Label
+                          htmlFor="r2"
+                          className={
+                            srcToJudgement[src]
+                              ? srcToJudgement[src] == "not-understood"
+                                ? "text-red-600"
+                                : "text-red-200"
+                              : "text-red-400"
+                          }
+                        >
+                          Not understood user's intent
+                        </Label>
+                      </div>
+                    </RadioGroup>
+                    <RadioGroup
+                      onValueChange={(value) =>
+                        setSrcToJudgement((prev) => ({ ...prev, [`${src}-relevance`]: value }))
                       }
                     >
                       <div className="flex items-center space-x-2">
@@ -166,7 +202,7 @@ export function SurveyForm({ index, request, srcToResponse }: SurveyFormProps) {
                               : "text-green-400"
                           }
                         >
-                          Relevant
+                          Relevant result
                         </Label>
                       </div>
                       <div className="flex items-center space-x-2">
@@ -181,7 +217,7 @@ export function SurveyForm({ index, request, srcToResponse }: SurveyFormProps) {
                               : "text-red-400"
                           }
                         >
-                          Irrelevant
+                          Irrelevant result
                         </Label>
                       </div>
                     </RadioGroup>
