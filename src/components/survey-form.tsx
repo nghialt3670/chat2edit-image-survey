@@ -222,7 +222,7 @@ export function SurveyForm({ index, request, srcToResponse }: SurveyFormProps) {
                               : "text-green-400"
                           }
                         >
-                          Relevant result
+                          Good result
                         </Label>
                       </div>
                       <div className="flex items-center space-x-2">
@@ -237,7 +237,7 @@ export function SurveyForm({ index, request, srcToResponse }: SurveyFormProps) {
                               : "text-red-400"
                           }
                         >
-                          Irrelevant result
+                          Bad result
                         </Label>
                       </div>
                     </RadioGroup>
