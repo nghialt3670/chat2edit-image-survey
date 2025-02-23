@@ -1,0 +1,31 @@
+,text,images,category,language,chat_id
+0,Here is your new image with the elephant replaced by a deer.,ce1558ae-89ab-45e6-9172-29dfd869a039.png,5,en,69191fde-2d3a-4628-9a19-e02e26c0571d
+1,Here's your image with the lotus replaced with a rose.,53cb285c-e2c0-4214-93a6-9362ab783a28.png,5,en,12ef17bc-7167-4788-b3bf-0fd359d1ea3e
+2,I have moved the lotus 50px to the right as per your request.,89e12cc1-d19e-443e-bd5a-65e679b4931b.png,5,en,102ae370-d295-4d03-88c7-0a628d09742a
+3,Here is the image with the lotus flower changed to red.,7e26cab4-1322-48d8-bd44-9bae0150b070.png,5,en,195fd12a-d592-4f01-9d48-4177bc9bde5d
+4,The lotus flower has been replaced with a white chrysanthemum. Here's the updated image.,48ebc364-fba1-4195-9367-3083217651f5.png,5,en,60d3237b-76a5-42c8-9377-cd1f13724532
+5,Here is the updated image with the lotus replaced.,592dc712-1a2b-4d8b-b121-4f536aaa6d7c.png,5,en,d50089e7-8ba2-4a98-ba96-b2d54f1cf02c
+6,Here is the lotus flower from your image.,1a14b8c4-5524-4cc3-acd8-4ace94986311.png,5,en,6e05ce80-83d5-4ec5-8e91-f15c90428e20
+7,I have reduced the size of the elephant by 20%. Please check the updated image.,e40827bf-3da8-4eb8-a480-0945d8d8476e.png,5,en,6d9bdd66-5b66-4269-a7a5-2b0325599fb9
+8,I have removed the carrots from the image.,7df151a9-a744-4b1e-a244-1fbc86383110.png,5,en,da35c0d7-a0a5-4914-807e-fa5bf6cc02f3
+9,Here is the image with the airplane removed:,bebb352b-9537-4401-a665-cae945675892.png,5,en,31c19ceb-67dc-4ab2-b207-10ed16a0f593
+10,Here is the image of the elephant.,90727832-56d9-4094-96c2-05d2e778336d.png,5,en,7070919b-7e49-4b48-8fab-ee00f78b6d72
+11,Here is your image with the object shrunk by 30%.,0fd606a2-f3fc-4b28-a23b-17aed96bb352.png,5,en,a2ea2c9c-fef0-4906-9605-510c5c3786a2
+12,Here is your image in grayscale.,77c1e44d-a0ae-4fe2-a4fd-7a2e57c92bd3.png,5,en,0648828c-3350-4a8c-b311-63afa048ea28
+13,"There are 2 dogs in the image. Could you please specify which one you'd like to remove, the left one or the right one?",78713445-ffc7-4263-809e-ba752e48348d.png,5,en,a5bcf745-bbeb-435a-b8dc-caf92886b886
+14,I have successfully removed the airplane's shadow. Here is the updated image.,b214b965-d8f2-47e4-b260-538e5cf94ae9.png,5,en,9f60e00b-ed06-4ec9-8cbb-f8c6490b4cd4
+15,No cats were found in the image. Please check and try again.,eca9bcac-1d8c-41dd-815e-a5ebde87fc83.png,2,en,2af29c67-92f6-4c68-895e-20ce473f19cf
+16,"I'm sorry, but I couldn't find any dog in the image.",92c31c5c-a096-4899-81e5-2b8820bc4383.png,2,en,46d5deea-aaa0-4b16-b225-08c1c8621972
+17,"I'm sorry, but I wasn't able to detect any cats in the image.",d2a3b708-f152-4d45-90dd-ba6c3c65ab80.png,2,en,f4b5b670-0828-45b6-b584-bb993e3ee7ab
+18,I'm unable to find a TV in the image. Could you provide further details?,d2dbe043-432d-4e8b-9db3-f5136ef955ad.png,2,en,b348c94c-c435-4801-8514-45d1801f660e
+19,I couldn't find a tiger in the image. Could you specify or upload another image?,a2035479-e147-4a50-8fb5-4b87858faec0.png,2,en,7bc83843-22f3-4644-9120-fd620d25bbe9
+20,"I'm sorry, but I couldn't find a deer in the image.",5a1dbca0-91a2-43a2-b863-d51f9202a932.png,2,en,13660bfb-63f1-4932-afae-c164addd88e3
+21,I could not find any rose in the second image. Could you please provide another image?,0bc56a43-72d2-4f1c-a732-bcaacf3ddcba.png,2,en,269ccf2d-087f-4e49-8e6c-35fb9470d6f2
+22,I couldn't detect any cats in the second image. Could you please provide another image?,8bfb228d-c404-4cb1-a02b-1f35c28dc069.png,2,en,a304c4a0-6114-4d8b-a524-bce62099e60a
+23,I couldn't find the plate of spaghetti in the image. Let's try removing the coffee cup.,156e9908-6e20-44f5-b29c-8664487a947d.png,2,en,c8a3d47e-bd08-4bb1-9394-43bba4ac11bc
+24,"I'm sorry, but I couldn't detect any glass in the image. Could you provide a different image?",b04c92a2-61ca-4791-a0b4-f72f039213fa.png,2,en,fd18a9b9-4598-418e-9e75-165a90b74270
+25,"I'm sorry, but I couldn't find any trees in the image you provided.",1422a472-f16f-461e-9fdd-dd43b2c74050.png,2,en,2c5fc49f-d4a0-4bff-a420-f4b09dc5b324
+26,I couldn't find a cat in the image. Are you sure there is one?,aa4c20bf-f1c0-4b82-a377-ba5d99688694.png,2,en,341698a1-43f6-45f7-b4a4-2bcd927aef9f
+27,We couldn't detect a large leaf in the image. Please upload another image.,,2,en,a401c0ed-5a6f-4fa6-91e6-76639c7cb8a5
+28,"I'm sorry, but I could not detect a boat in the image. Could you specify it for me?",bb966707-f3b7-43be-bdd8-19bfd020e109.png,2,en,7fc2cc41-c28b-4e00-b688-a3ab0add58d1
+29,"I'm sorry, but I couldn't find a cat in the given image.",eaf79c71-3667-45b7-ac69-fc92b4bd17d1.png,2,en,dac94f44-1d42-469b-b002-740fd58168db

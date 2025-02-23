@@ -1,0 +1,31 @@
+,text,images,category,language
+0,Replace the elephant with a deer.,pic07.jpg,5,en
+1,Replace the lotus with a rose.,pic02.jpg,5,en
+2,Move the lotus 50px to the right.,pic02.jpg,5,en
+3,Change the color of the lotus flower to red.,pic02.jpg,5,en
+4,Replace the lotus flower with a white chrysanthemum.,pic02.jpg,5,en
+5,Replace the lotus in the first image with the lotus from the second image.,pic02.jpg;pic06.jpg,5,en
+6,Give me the lotus flower in the photo.,pic02.jpg,5,en
+7,Reduce the size of the elephant by 20%.,pic07.jpg,5,en
+8,Remove all carrots from the image.,pic04.jpg,5,en
+9,Remove the airplane from the image.,pic19.jpg,5,en
+10,Give me the elephant in the image,pic07.jpg,5,en
+11,Shrink the object in the image by 30%.,pic17.jpg,5,en
+12,Convert the image to grayscale.,pic30.jpg,5,en
+13,Remove the white dog from the image.,pic34.jpg,5,en
+14,Remove the airplane's shadow on the surface of the sea.,pic19.jpg,5,en
+15,Remove the cat from the image.,pic05.jpg,2,en
+16,Replace the dog in the image with any horse.,pic05.jpg,2,en
+17,Replace the cat in the image with a cute puppy.,pic10.jpg,2,en
+18,Replace the TV with an artistic oil painting.,pic10.jpg,2,en
+19,Increase the brightness of the tiger in the image by 30%.,pic09.jpg,2,en
+20,Remove the deer from the image.,pic09.jpg,2,en
+21,Replace the lotus in the first image with a rose from the second image.,pic02.jpg;pic09.jpg,2,en
+22,Add the cat from the second image to the right of the first image.,pic02.jpg;pic09.jpg,2,en
+23,Remove the plate of spaghetti and coffee cup from the table.,pic08.jpg,2,en
+24,Add a water glass similar to the one in the image in the center of the image.,pic08.jpg,2,en
+25,Remove the big tree from the image.,pic03.jpg,2,en
+26,Remove the cat from the image.,pic32.jpg,2,en
+27,Add a few water droplets to the large leaf in the image.,pic26.jpg,2,en
+28,Separate the large boat in the image.,pic05.jpg,2,en
+29,Move the cat in the image 80px to the left.,pic15.jpg,2,en

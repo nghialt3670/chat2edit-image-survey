@@ -1,14 +1,13 @@
 "use client";
 
-import { useRouter } from "next/navigation";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { useSurveyResult } from "@/hooks/use-survey-result";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import Link from "next/link";
 
 export default function HomePage() {
-  const { fullName, email, setFullName, setEmail } = useSurveyResult();
-  const router = useRouter();
+  const { fullName, setFullName } = useSurveyResult();
 
   return (
     <Card className="flex flex-col h-[calc(100vh-48px)] m-6">
@@ -37,14 +36,21 @@ export default function HomePage() {
           value={fullName}
           onChange={(e) => setFullName(e.target.value)}
         />
-        <Input
-          type="email"
-          placeholder="Your Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <Button disabled={!fullName || !email} onClick={() => router.push("/forms")}>
-          Start
+
+        <Button variant={"link"} disabled={!fullName}>
+          <Link href={`/forms?fullName=${fullName}&index=1`}>
+            Form 1
+          </Link>
+        </Button>
+        <Button variant={"link"} disabled={!fullName}>
+          <Link href={`/forms?fullName=${fullName}&index=2`}>
+            Form 2
+          </Link>
+        </Button>
+        <Button variant={"link"} disabled={!fullName}>
+          <Link href={`/forms?fullName=${fullName}&index=3`}>
+            Form 3
+          </Link>
         </Button>
       </CardContent>
     </Card>

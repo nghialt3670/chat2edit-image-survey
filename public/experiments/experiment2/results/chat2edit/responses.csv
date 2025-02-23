@@ -1,0 +1,31 @@
+,text,images,category,language,chat_id
+0,There are 2 carrots in the image. Which one would you like to remove?,ad2093ae-97f9-4180-a311-4fcde3efa815.png,0,en,7c8b8d33-eb3b-494b-8157-f64ac8b27e42
+1,Here is your image with the lemon replaced with an orange.,0b098bbb-cfc7-4fc6-bd34-2344f540aa20.png,0,en,2588574a-5d03-4094-99b6-6ff39c8bd40e
+2,"I'm sorry, but I could not find a wooden chair in the image.",3d663186-3883-4234-bc4b-29d342252870.png,0,en,043e561f-28cd-46a2-a847-55f347107559
+3,There are 3 dogs in the image. Which one do you want to adjust the brightness?,a59ecd0b-b4f8-4d32-9f12-55cda42951ee.png,0,en,8254c8d0-c7e4-4b68-90e5-3d72f15cbf5c
+4,There are 3 dogs in the image. Which one would you like to rotate?,e8e75a4e-fc61-4645-948a-cdd9711c4049.png,0,en,7e960bc8-4df6-42d8-b426-1505f057f7a6
+5,I have successfully removed the brown bag from the image.,81f059ae-f6e6-4015-a688-61986af6019d.png,0,en,14ee3c7c-cde8-4e7f-b1d7-5a4db57504be
+6,"There are 2 sets of glasses in the image, which one would you like to replace with a handbag?",767d57e0-2db1-44b5-9390-b6ccc02afc52.png,0,en,d504104b-6145-4d94-aff3-d88407594142
+7,The player has been moved 30px to the right.,734dfcb5-0de6-47db-a1b0-eaf929daf173.png,0,en,e12a5b1f-8c63-4df0-a58a-e71862261d84
+8,There are 6 coats in the image. Which one would you like to remove?,d6b15dc9-f477-4b77-a95f-143c13feaf0b.png,0,en,32fc655b-0a86-408f-a56f-c38fab6020f0
+9,There are 4 white flowers in the image. Which one would you like to remove?,7f81aafa-aa87-4be2-a5ac-70dc81e41a34.png,0,en,6af6853b-17bd-4f83-a20f-be6fb0adb09b
+10,There are 2 dogs in the image. Which one would you like to replace with a cat?,d5850713-88ea-41e7-8e44-2fef13015702.png,0,en,2024bb17-16a2-432f-962d-d677efac8799
+11,Here is your image with the dog shrunk by 35%.,5fdffa85-6d26-4983-8faa-4fcf91d453c3.png,0,en,6ff23e1b-df49-4ee1-b81f-d7426366d8d2
+12,There are 4 fish in the image. Which one would you like to remove?,93b1a2ac-355b-45d3-a4bb-2b6c1f985ff1.png,0,en,cb946a09-3fd1-4ea2-8594-778c58c79561
+13,There are 4 fish in the image. Which one would you like to separate?,183c7c16-2fad-49df-99b1-308591aef3ee.png,0,en,4bd7dbeb-6463-4b09-86e7-c8b6f07c3e6b
+14,There are 2 hands in the image. Which one would you like to enlarge?,f47579de-fcaf-4a1e-be72-355da7fc29fb.png,0,en,5cb538db-fb11-4abb-ad8a-36a40ec832ed
+15,"I'm sorry, but I can't help with extending the legs of the figures in the image. Currently, I can remove and replace objects, adjust image filters, and swap out graphics.",,3,en,50806ae4-21e9-4a78-abb5-7608e95a15c4
+16,"Sorry, I currently can't convert the image to an oil painting style.",,3,en,84c689a5-6dbf-420c-b4f5-620cc184a715
+17,"Sorry, I'm currently unable to create a video from an image.",,3,en,e5f4d811-6f1a-4426-8e71-e1a8f330b2a3
+18,There are 6 characters in the image. Which ones would you like to add speech bubbles to?,bb63bc20-2e52-4d9d-b583-b8cc9b234bef.png,3,en,09b60b54-fedd-4b76-97c4-f517af8bb651
+19,How does it look now?,7b318a36-fa05-4984-89f7-589f816243d0.png,3,en,ee31761d-2173-4d93-aafe-97a679cbee7b
+20,Here is the image with a park background. What else would you like to do?,bf726e5f-86a2-48da-bb9d-846962d7b2bd.png,3,en,d23a0233-b8d8-46c1-abfb-e3c5f3b0af46
+21,Here's the edited image.,81b634a5-5f71-416b-8e01-d7a7037ae56e.png,3,en,f24ec40c-d135-49a8-ab10-bd9486e7a29b
+22,Here is your image with the people replaced by a flower garden.,0e2fac77-33e3-4e31-8393-3c92a9b0084a.png,3,en,de71b6df-6890-41ab-aa77-2f08d9b4ad7d
+23,"I'm sorry, but currently we do not support converting images to an anime style.",,3,en,b410eca1-97bb-4cff-9fad-365764aaaf51
+24,"Sorry, there seems to be a technical issue on our side. We will resolve it soon.",,3,en,d9becede-5f08-4088-b706-514cb55c22f0
+25,"I'm sorry, we currently don't have the functionality to convert images to an oil painting style.",,3,en,4721b651-a323-4317-a26b-6efa5e8ff5ad
+26,"I'm sorry, but I can only handle image manipulations. I can't create videos from images.",,3,en,301d24d4-84b1-48f0-ba9d-dd49458d945d
+27,There are no discernable objects in the image to replace with a fruit garden.,dbd6afca-ae82-4ed6-b80b-dc29dae6a77c.png,3,en,8de8c722-5918-4d8b-8b6f-22998fcc9f63
+28,I was not able to detect two dogs in the provided image. Please provide an image with at least two dogs.,,3,en,4b41f1e1-9203-4670-be18-b8426283b4da
+29,"I'm sorry, but I can't convert images to a PowerPoint file with the current capabilities.",,3,en,52430ee2-37a9-4b90-8a9b-40f4df4a321d

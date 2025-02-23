@@ -3,7 +3,7 @@ import { useEffect, useMemo, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import _ from "lodash";
 import Image from "next/image";
-import { Card, CardContent, CardFooter, CardHeader } from "./ui/card";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "./ui/card";
 import { RadioGroup, RadioGroupItem } from "./ui/radio-group";
 import { useSurveyResult } from "@/hooks/use-survey-result";
 import { Message as IMessage } from "@/interfaces/message";
@@ -11,18 +11,23 @@ import { useCarousel } from "./ui/carousel";
 import { Separator } from "./ui/separator";
 import { Button } from "./ui/button";
 import { Label } from "./ui/label";
-import { map } from 'lodash';
+import { useSearchParams } from "next/navigation";
 
 interface SurveyFormProps {
   index: number;
   request: IMessage;
   srcToResponse: Record<string, IMessage>;
+  currIndex: number;
+  total: number;
 }
 
-export function SurveyForm({ index, request, srcToResponse }: SurveyFormProps) {
+export function SurveyForm({ index, request, srcToResponse, currIndex, total }: SurveyFormProps) {
+  const searchParams = useSearchParams();
   const [fullScreenImage, setFullScreenImage] = useState<string | null>(null);
   const { canScrollPrev, scrollPrev, canScrollNext, scrollNext } =
     useCarousel();
+
+  const formIndex = searchParams.get("index");
 
   const [srcToJudgement, setSrcToJudgement] = useState<Record<string, string>>(
     {},
@@ -30,7 +35,11 @@ export function SurveyForm({ index, request, srcToResponse }: SurveyFormProps) {
   const { setResults } = useSurveyResult();
 
   useEffect(() => {
-    if (Object.keys(srcToResponse).length * 2 === Object.keys(srcToJudgement).length) {
+    if (Object.keys(
+      Object.fromEntries(
+        Object.entries(srcToResponse).filter(([_, response]) => response.text),
+      ),
+    ).length * 2 === Object.keys(srcToJudgement).length) {
       setResults(index, srcToJudgement);
     }
   }, [srcToJudgement, index]);
@@ -74,6 +83,11 @@ export function SurveyForm({ index, request, srcToResponse }: SurveyFormProps) {
 
       {/* Main Card */}
       <Card className="h-[calc(100vh-100px)] flex flex-col m-6">
+        <CardHeader>
+          <CardTitle>
+            {currIndex + 1} / {total}
+          </CardTitle>
+        </CardHeader>
         <CardContent className="h-full flex flex-col space-y-4 p-4 overflow-y-scroll">
           <div className="w-full md:w-1/3 h-fit ml-auto border-none p-4">
             <div className="flex flex-col space-y-2 ml-auto w-fit">
@@ -83,13 +97,13 @@ export function SurveyForm({ index, request, srcToResponse }: SurveyFormProps) {
                   <div key={image} className="relative">
                     <Image
                       className="rounded-lg cursor-pointer ml-auto w-full"
-                      src={`/experiment/dataset/images/${image}`}
+                      src={`/experiments/dataset/images/${image}`}
                       alt="Request image"
                       width={400}
                       height={300}
                       onClick={() =>
                         setFullScreenImage(
-                          `/experiment/dataset/images/${image}`,
+                          `/experiments/dataset/images/${image}`,
                         )
                       }
                     />
@@ -98,7 +112,7 @@ export function SurveyForm({ index, request, srcToResponse }: SurveyFormProps) {
                       className="absolute top-2 right-2 size-8 p-1 bg-white/80 rounded-full"
                       onClick={() =>
                         setFullScreenImage(
-                          `/experiment/dataset/images/${image}`,
+                          `/experiments/dataset/images/${image}`,
                         )
                       }
                     >
@@ -133,13 +147,13 @@ export function SurveyForm({ index, request, srcToResponse }: SurveyFormProps) {
                           <div key={image} className="relative">
                             <Image
                               className="w-full h-auto rounded-lg cursor-pointer"
-                              src={`/experiment/results/${src}/images/${image}`}
+                              src={`/experiments/experiment${formIndex}/results/${src}/images/${image}`}
                               alt="Response image"
                               width={400}
                               height={300}
                               onClick={() =>
                                 setFullScreenImage(
-                                  `/experiment/results/${src}/images/${image}`,
+                                  `/experiments/experiment${formIndex}/results/${src}/images/${image}`,
                                 )
                               }
                             />
@@ -148,7 +162,7 @@ export function SurveyForm({ index, request, srcToResponse }: SurveyFormProps) {
                               className="absolute top-2 right-2 size-8 p-1 bg-white/80 rounded-full"
                               onClick={() =>
                                 setFullScreenImage(
-                                  `/experiment/results/${src}/images/${image}`,
+                                  `/experiments/experiment${formIndex}/results/${src}/images/${image}`,
                                 )
                               }
                             >

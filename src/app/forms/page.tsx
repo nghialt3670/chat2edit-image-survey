@@ -12,17 +12,26 @@ import { useSurveyResult } from "@/hooks/use-survey-result";
 import { SurveyForm } from "@/components/survey-form";
 import { Button } from "@/components/ui/button";
 import { Message } from "@/interfaces/message";
+import { useSearchParams } from "next/navigation";
 
 const SOURCES = ["chat2edit", "gemini", "chatgpt"];
-const N = 100;
+const N = 30;
 
 export default function FormsPage() {
+  const searchParams = useSearchParams();
   const [isFetching, setIsFetching] = useState<boolean>(true);
   const [requests, setRequests] = useState<Message[]>([]);
   const [srcToResponses, setSrcToResponses] = useState<
     Record<string, Message[]>
   >({});
-  const { fullName, email, results } = useSurveyResult();
+  const { results } = useSurveyResult();
+
+  const formIndex = searchParams.get("index");
+  const fullName = searchParams.get("fullName");
+
+  if (!formIndex || !fullName) {
+    return undefined;
+  }
 
   const readCsvToMessages = (text: string): Message[] => {
     const result = Papa.parse(text, { header: true });
@@ -44,7 +53,7 @@ export default function FormsPage() {
     const loadData = async () => {
       setIsFetching(true);
       // Fetch requests
-      const requestsText = await fetch("/experiment/dataset/requests.csv").then(
+      const requestsText = await fetch(`/experiments/experiment${formIndex}/dataset/requests.csv`).then(
         (res) => res.text(),
       );
       const requests = readCsvToMessages(requestsText);
@@ -53,7 +62,7 @@ export default function FormsPage() {
       const srcToResponses: Record<string, Message[]> = {};
       for (const src of SOURCES) {
         const responsesText = await fetch(
-          `/experiment/results/${src}/responses.csv`,
+          `/experiments/experiment${formIndex}/results/${src}/responses.csv`,
         ).then((res) => res.text());
         srcToResponses[src] = readCsvToMessages(responsesText);
       }
@@ -83,23 +92,20 @@ export default function FormsPage() {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
+        formIndex,
         fullName,
-        email,
         results,
       }),
     });
 
     if (response.ok) {
-      // Redirect to /thanks after successful submission
       window.location.href = "/thanks";
     } else {
-      // Handle the error (optional)
       console.error("Error submitting the form.");
     }
   };
 
-  const canSubmit =
-    !!fullName && !!email && Object.keys(results).length === requests.length;
+  const canSubmit = !!fullName && Object.keys(results).length === requests.length;
 
   if (isFetching) {
     return undefined;
@@ -113,6 +119,8 @@ export default function FormsPage() {
             <CarouselItem key={idx} className="h-full relative">
               <SurveyForm
                 index={order[idx]}
+                currIndex={idx}
+                total={N}
                 request={request}
                 srcToResponse={Object.fromEntries(
                   Object.entries(srcToResponses).map(([src, responses]) => [
