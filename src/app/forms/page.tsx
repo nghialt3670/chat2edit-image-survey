@@ -29,10 +29,6 @@ export default function FormsPage() {
   const formIndex = searchParams.get("index");
   const fullName = searchParams.get("fullName");
 
-  if (!formIndex || !fullName) {
-    return undefined;
-  }
-
   const readCsvToMessages = (text: string): Message[] => {
     const result = Papa.parse(text, { header: true });
     const rows = result.data as Record<string, any>[];
@@ -107,7 +103,7 @@ export default function FormsPage() {
 
   const canSubmit = !!fullName && Object.keys(results).length === requests.length;
 
-  if (isFetching) {
+  if (isFetching || !formIndex || !fullName) {
     return undefined;
   }
 
