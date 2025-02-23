@@ -236,7 +236,7 @@ export function SurveyForm({ index, request, srcToResponse, currIndex, total }: 
                               : "text-green-400"
                           }
                         >
-                          Good result
+                          Reasonable response
                         </Label>
                       </div>
                       <div className="flex items-center space-x-2">
@@ -251,7 +251,7 @@ export function SurveyForm({ index, request, srcToResponse, currIndex, total }: 
                               : "text-red-400"
                           }
                         >
-                          Bad result
+                          Unreasonable response
                         </Label>
                       </div>
                     </RadioGroup>
