@@ -6,7 +6,7 @@
 4,The dog has been successfully rotated to the left as requested!,res74.png,1
 5,Sure! I’ve moved the dog downwards as requested. Let me know if you need any further adjustments!,res75.png,1
 6,"I will reduce the brightness of the dog in the image by adjusting the brightness accordingly. To do this, I will use OpenCV or Pillow to process the image. Wait a moment!",res76.png,1
-7,I have increased the saturation of the image by 50%. You can download the enhanced image here.,res77.png,1
+7,I have decreased the brightness of the image by 30%. You can download the adjusted image here,res78.png,1
 8,"I've resized the elephant to make it smaller, as you asked. Feel free to let me know if you need any more changes!",res79.png,1
 9,I've shifted the rabbit a bit to the left as you asked. Feel free to let me know if you'd like any more adjustments!,res80.png,1
 10,"Sure! After shrinking the motorcycle in the image, the motorcycle now appears smaller compared to its previous size, while maintaining the overall composition and proportions of the scene.",res81.png,1
